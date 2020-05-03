@@ -33,8 +33,6 @@ Example usage:<br>
 
 ```
 
-Work to be done:
-
-Import function from os_server module.
-
-Testing of module
+Work to be done:<br>
+1)Import function from os_server module.<br>
+2) Testing of module<br>
