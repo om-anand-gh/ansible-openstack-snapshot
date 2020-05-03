@@ -15,19 +15,24 @@ Note: Theres an implicit localhost problem one encounters when running modules w
 Lastly paste the oy file in your ansible modules dir (/home/user/.local/lib//home/ansible/.local/lib/python2.7/site-packages/ansible/modules/cloud/openstack/) or you create a dir called libary in your working directory and place the file in there. (The playbooks have to be one level up the library directory)
 
 Example usage:<br>
+```
+- hosts: ws 
+  tasks: 
+  - name: 'Create Snapshot'
+    os_server_snapshot:
+        auth:
+            auth_url: http://192.168.56.20/identity
+            username: 'admin'
+            password: 'secret'
+            project_name: 'demo'
+            project_id: 350e9ee3b6fb46b58e5bed9d1c498531
+            user_domain_name: 'Default'
+        name: 'snapshot-4'
+        server: 'cf50b65b-46c3-45dc-a2c6-e3506ea8e810'
+        wait: True
 
-- hosts: ws <br>
-  tasks: <br>
-  - name: 'Create Snapshot' <br>
-    os_server_snapshot:<br>
-        auth:<br>
-            auth_url: http://192.168.56.20/identity<br>
-            username: 'admin'<br>
-            password: 'secret'<br>
-            project_name: 'demo'<br>
-            project_id: 350e9ee3b6fb46b58e5bed9d1c498531<br>
-            user_domain_name: 'Default'<br>
-        name: 'snapshot-4'<br>
-        server: 'cf50b65b-46c3-45dc-a2c6-e3506ea8e810'<br>
-        wait: True<br>
+```
 
+Work to be done:
+Import function from os_server module.
+Testing of module
