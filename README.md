@@ -12,7 +12,7 @@ Pre Requisites: Setup ansible-collection-openstack and phython interprtor for lo
 
 Note: Theres an implicit localhost problem one encounters when running modules with python script. Ansible has mentioned their solution([link](https://docs.ansible.com/ansible/latest/inventory/implicit_localhost.html)). I wasn't able to make it work  properly so I made another node just to run those modules.
 
-Lastly paste the oy file in your ansible modules dir (/home/user/.local/lib//home/ansible/.local/lib/python2.7/site-packages/ansible/modules/cloud/openstack/) or you create a dir called libary in your working directory and place the file in there. (The playbooks have to be one level up the library directory)
+Lastly paste the py file in your ansible modules dir (/home/user/.local/lib//home/ansible/.local/lib/python2.7/site-packages/ansible/modules/cloud/openstack/) or you create a dir called libary in your working directory and place the file in there. (The playbooks have to be one level up the library directory)
 
 Example usage:<br>
 ```
